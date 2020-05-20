@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Election Results</title>
+
+  <!-- Bootstrap -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+  <div class="container">
+    <div class="row">
+      <div id="principioPagina" class="col-lg-12">
+        <h1 class="text-center">Mensajes (Twitter)</h1>
+        <hr />
+        <br />
+        <div id="loader">
+          <p class="text-center">Cargando...</p>
+        </div>
+        <div id="content" style="display: none;">
+          <div class="jumbotron">
+            <h1 class="display-4">Hola!</h1>
+            <p class="lead" id="accountAddress"></p>
+          </div>
+          <form onSubmit="App.tweet(); return false;">
+            <div class="form-group">
+              <label for="tweet">Cuenta lo que quieras:</label>
+              <input type="text" id="tweet" class="form-control">
+            </div>
+            <button type="submit" class="btn btn-primary">Publicar</button>
+          </form>
+          <form onSubmit="App.seguir(); return false;">
+            <div class="form-group">
+              <label for="seguidor">Introduce el seguidor:</label>
+              <input type="text" id="seguidor" class="form-control">
+            </div>
+            <button type="submit" class="btn btn-primary">Seguir</button>
+          </form>
+          <br>
+          <ul class="nav nav-pills nav-fill">
+            <li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#menu1" role="tab">Mis tweets</a></li>
+            <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#menu2" role="tab">Seguidos</a></li>
+          </ul>
+          <div class="tab-content">
+            <div id="menu1" class="tab-pane fade show active">
+            </div>
+            <div id="menu2" class="tab-pane fade">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/web3.min.js"></script>
+  <script src="js/truffle-contract.js"></script>
+  <script src="js/app.js"></script>
+</body>
+
+</html>
