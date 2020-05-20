@@ -1,1 +1,4 @@
 # TFG
+Este es el repositorio donde voy a guardar el código que desarrolle para el TFG. Este trata sobre el desarrollo de Dapps, que no es otra cosa que el desarrollo de aplicaciones que se encuentran dentro de una blockchain. Las Dapps surgierón al explotar las funcionalidades que ofrecen los contratos inteligentes. En este caso lo que se encuentra en este repositorio va a ser desarrollado en el entorno de Ethereum, concretamente con su lenguaje de programación Solidity.
+## Primera Dapp: Twitter
+La idea es la creación de una "Red social" que esta no se encuentre manejada por una compañía, si no que se encuentra de manera distribuida dentro de una red de blockchain. Lo que he hecho, de manera simplificada, es replicar el concepto de "tweet" que hay en Twitter y permitir poder seguir a otros usuarios y ver sus tweets.
