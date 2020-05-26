@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tres en raya</title>
+
+  <!-- Bootstrap -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+  <div class="container">
+    <div class="row">
+      <div id="principioPagina" class="col-lg-12">
+        <h1 class="text-center my-3">Tres en raya</h1>
+        <hr />
+        <br />
+        <div id="loader">
+          <p class="text-center">Cargando...</p>
+        </div>
+        <div id="content" style="display: none;">
+        <div class="row" id="divButton">
+          <div class="col-md-4"></div>
+          <div class="col-md-4">
+            <button class="btn btn-block btn-outline-danger btn-lg" onclick="App.buscarPartida()">Buscar Partida</button>
+          </div>
+          <div class="col-md-4"></div>
+        </div>
+        <div id="divTabla" style="display: none;">
+          <div class="row">
+            <div class="col">
+              <h2 id="turno" class="bg-dark text-danger text-center rounded my-3">TURNO</h2>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <h2 id="informacion" class="bg-dark text-danger text-center rounded my-3">MOVIMIENTO</h2>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-3"></div>
+            <div class="col-md-6">
+              <table class="table table-bordered table-dark text-center display-2 align-middle" style="table-layout: fixed;">
+                <tbody>
+                  <tr>
+                    <td id="td1"></td>
+                    <td id="td2"></td>
+                    <td id="td3"></td>
+                  </tr>
+                  <tr>
+                    <td id="td4"></td>
+                    <td id="td5"></td>
+                    <td id="td6"></td>
+                  </tr>
+                  <tr>
+                    <td id="td7"></td>
+                    <td id="td8"></td>
+                    <td id="td9"></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="col-md-3"></div>
+          </div>
+          </div>
+        </div>
+        <div class="row mt-5">
+          <div class="col-md-4"></div>
+          <div class="col-md-4">
+            <button class="btn btn-block btn-outline-warning btn-lg" onclick="App.resetear()">Resetear contrato</button>
+          </div>
+          <div class="col-md-4"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/web3.min.js"></script>
+  <script src="js/truffle-contract.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/aes.js"></script>
+  <script src="js/app.js"></script>
+</body>
+
+</html>
