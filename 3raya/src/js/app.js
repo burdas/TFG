@@ -130,13 +130,13 @@ App = {
         }
         if (ganador != 0) {
           if (ganador == 1) {
-            alert("Ha ganado el Jugador 1\n Acepta la siguiente transacción para resetear el contrato");
+            alert("Ha ganado el Jugador 1");
+          } else if(ganador == 2) {
+            alert("Ha ganado el jugador 2");
           } else {
-            alert("Ha ganado el jugador 2\n Acepta la siguiente transacción para resetear el contrato");
-          }
-          instancia.reset().then(function () {
-            location.reload;
-          });
+            alert("Empate");
+          } 
+          location.reload();
         }
       });
     });
@@ -165,8 +165,6 @@ function click1() {
     return instance.movimiento(2, 0);
   }).then(function (result) {
     // console.log(result);
-    $("#td1").click(false);
-
   }).catch(function (err) {
     console.error(err);
   });
@@ -176,8 +174,6 @@ function click2() {
   App.contracts.TresRaya.deployed().then(function (instance) {
     return instance.movimiento(2, 1);
   }).then(function (result) {
-    $("#td2").click(false);
-
   }).catch(function (err) {
     console.error(err);
   });
@@ -187,8 +183,6 @@ function click3() {
   App.contracts.TresRaya.deployed().then(function (instance) {
     return instance.movimiento(2, 2);
   }).then(function (result) {
-    $("#td3").click(false);
-
   }).catch(function (err) {
     console.error(err);
   });
@@ -198,8 +192,6 @@ function click4() {
   App.contracts.TresRaya.deployed().then(function (instance) {
     return instance.movimiento(1, 0);
   }).then(function (result) {
-    $("#td4").click(false);
-
   }).catch(function (err) {
     console.error(err);
   });
@@ -209,8 +201,6 @@ function click5() {
   App.contracts.TresRaya.deployed().then(function (instance) {
     return instance.movimiento(1, 1);
   }).then(function (result) {
-    $("#td5").click(false);
-
   }).catch(function (err) {
     console.error(err);
   });
@@ -220,8 +210,6 @@ function click6() {
   App.contracts.TresRaya.deployed().then(function (instance) {
     return instance.movimiento(1, 2);
   }).then(function (result) {
-    $("#td6").click(false);
-
   }).catch(function (err) {
     console.error(err);
   });
@@ -231,8 +219,6 @@ function click7() {
   App.contracts.TresRaya.deployed().then(function (instance) {
     return instance.movimiento(0, 0);
   }).then(function (result) {
-    $("#td7").click(false);
-
   }).catch(function (err) {
     console.error(err);
   });
@@ -242,8 +228,6 @@ function click8() {
   App.contracts.TresRaya.deployed().then(function (instance) {
     return instance.movimiento(0, 1);
   }).then(function (result) {
-    $("#td8").click(false);
-
   }).catch(function (err) {
     console.error(err);
   });
@@ -253,8 +237,6 @@ function click9() {
   App.contracts.TresRaya.deployed().then(function (instance) {
     return instance.movimiento(0, 2);
   }).then(function (result) {
-    $("#td9").click(false);
-
   }).catch(function (err) {
     console.error(err);
   });

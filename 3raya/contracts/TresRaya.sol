@@ -29,7 +29,7 @@ contract TresRaya {
     }
 
     function getTablero(uint i, uint j) public view returns (uint) {
-        if (tablero[i][j] == Opciones.jugador1){
+        if (tablero[i][j] == Opciones.jugador1) {
             return 1;
         } else {
             if (tablero[i][j] == Opciones.jugador2) {
@@ -40,11 +40,11 @@ contract TresRaya {
         }
     }
 
-    function hayHueco() public view returns(bool){
+    function hayHueco() public view returns (bool) {
         return player1 == address(0) || player2 == address(0);
     }
 
-    function hayJugador1() public view returns(bool){
+    function hayJugador1() public view returns (bool) {
         return player1 != address(0);
     }
 
@@ -57,38 +57,42 @@ contract TresRaya {
         player2 = msg.sender;
     }
 
-    event movimientoRealizado(uint x, uint y, uint turno,uint ganador);
+    event movimientoRealizado(
+        uint x,
+        uint y,
+        uint turno,
+        uint ganador
+    );
 
-    function movimiento(uint x, uint y) public{
+    function movimiento(uint x, uint y) public {
         if (turno == Opciones.vacio) {
             turno = Opciones.jugador1;
         }
-        // uint salida = 0;
-        // require(
-        //     turno == Opciones.jugador1 && msg.sender == player1,
-        //     "Es el turno del jugador 1"
-        // );
-        // require(
-        //     turno == Opciones.jugador2 && msg.sender == player2,
-        //     "Es el turno del jugador 2"
-        // );
         require(tablero[x][y] == Opciones.vacio, "Posición no valida");
         tablero[x][y] = turno;
         Opciones ganador = hayGanador();
         uint intganador;
         uint intturno;
-        if(ganador == Opciones.jugador1){intganador = 1;}
-        if(ganador == Opciones.jugador2){intganador = 2;}
-        if(ganador == Opciones.vacio){intganador = 0;}
-        if(turno == Opciones.jugador1){intturno = 1;}
-        if(turno == Opciones.jugador2){intturno = 2;}
+        if (ganador == Opciones.jugador1) {
+            intganador = 1;
+        }
+        if (ganador == Opciones.jugador2) {
+            intganador = 2;
+        }
+        if (ganador == Opciones.vacio) {
+            intganador = 0;
+        }
+        if(hayEmpate()){
+            intganador = 3;
+        }
+        if (turno == Opciones.jugador1) {
+            intturno = 1;
+        }
+        if (turno == Opciones.jugador2) {
+            intturno = 2;
+        }
         emit movimientoRealizado(x, y, intturno, intganador);
-        if (ganador != Opciones.vacio) {
-            // if (ganador == Opciones.jugador1) {
-            //     salida = 1;
-            // } else {
-            //     salida = 2;
-            // }
+        if (ganador != Opciones.vacio || intganador == 3) {
             reset();
         } else {
             if (turno == Opciones.jugador1) {
@@ -99,9 +103,22 @@ contract TresRaya {
         }
     }
 
+    function hayEmpate() private view returns (bool) {
+        bool salida = true;
+        for (uint i = 0; i < 3; i++) {
+            for (uint j = 0; j < 3; i++) {
+                if(tablero[i][j] == Opciones.vacio){
+                    salida = false;
+                    return salida;
+                }
+            }
+        }
+        return salida;
+    }
+
     function hayGanador() private view returns (Opciones) {
         // Comprobamos las filas y las columnas
-        for (uint256 i = 0; i < 3; i++) {
+        for (uint i = 0; i < 3; i++) {
             // filas
             if (
                 tablero[i][0] == tablero[i][1] && tablero[i][0] == tablero[i][2]
