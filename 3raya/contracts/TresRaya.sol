@@ -28,18 +28,6 @@ contract TresRaya {
         reset();
     }
 
-    function getTablero(uint i, uint j) public view returns (uint) {
-        if (tablero[i][j] == Opciones.jugador1) {
-            return 1;
-        } else {
-            if (tablero[i][j] == Opciones.jugador2) {
-                return 2;
-            } else {
-                return 0;
-            }
-        }
-    }
-
     function hayHueco() public view returns (bool) {
         return player1 == address(0) || player2 == address(0);
     }

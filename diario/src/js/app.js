@@ -58,10 +58,7 @@ App = {
           })
         });
       }
-      // $("#content").hide();
-      // $("#loader").show();
     }).catch(function (err) {
-      // $("#principioPagina").append(plantillaAlerta.replace("{{CONTENIDO}}", "Error al publicar el tweet"));
       console.error(err);
     });
   },
