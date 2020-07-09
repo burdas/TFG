@@ -17157,12 +17157,12 @@
         }
       },
       "links": {},
-      "address": "0xb269b01978505f6B1D92CeE373d7d51baB420Bb5",
-      "transactionHash": "0x5f5d3199ada4370e4b679c5d1654a9e73797fee0a0f9486e3f5dffd2f4f2f503"
+      "address": "0x80fe5Aa892131A80d54F75B956c05Acb743032EC",
+      "transactionHash": "0xf86ef0fef99b5a29f5087e4d16d2b3bb8b373008180e207193a59202c9c8a997"
     }
   },
   "schemaVersion": "3.1.0",
-  "updatedAt": "2020-05-26T10:09:19.171Z",
+  "updatedAt": "2020-05-26T16:11:30.986Z",
   "networkType": "ethereum",
   "devdoc": {
     "methods": {}
