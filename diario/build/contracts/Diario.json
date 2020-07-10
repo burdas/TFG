@@ -3080,12 +3080,12 @@
     "5777": {
       "events": {},
       "links": {},
-      "address": "0x1501619b739fc7725851ED98BB968f21FeA9aB85",
-      "transactionHash": "0x5d3966fa7692aa5de6349272a7eb2724ad0649845e58e1ce9edf07f167d13fcf"
+      "address": "0x6611fDFb55D346100CB160Bc7F6cD6e9d0EA64FC",
+      "transactionHash": "0x1c2838a84100f9f05b41352ceef2c2dea7fbbfe0dd73db435047c7e034dedbdc"
     }
   },
   "schemaVersion": "3.1.0",
-  "updatedAt": "2020-05-27T00:24:17.505Z",
+  "updatedAt": "2020-07-10T15:03:07.167Z",
   "networkType": "ethereum",
   "devdoc": {
     "methods": {}
