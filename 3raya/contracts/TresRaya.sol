@@ -94,7 +94,7 @@ contract TresRaya {
     function hayEmpate() private view returns (bool) {
         bool salida = true;
         for (uint i = 0; i < 3; i++) {
-            for (uint j = 0; j < 3; i++) {
+            for (uint j = 0; j < 3; j++) {
                 if(tablero[i][j] == Opciones.vacio){
                     salida = false;
                     return salida;
